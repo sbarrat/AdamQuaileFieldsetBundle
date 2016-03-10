@@ -17,6 +17,8 @@ class FieldsetType extends AbstractType {
     {
         $resolver->setDefaults(array(
             'legend'    => '',
+            'icon' => '',
+            'fieldset_class' => '',
             'inherit_data'   => true,
             'options'   => array(),
             'fields'    => array(),
@@ -54,6 +56,12 @@ class FieldsetType extends AbstractType {
     {
         if (false !== $options['legend']) {
             $view->vars['legend'] = $options['legend'];
+        }
+        if (false !== $options['icon']) {
+            $view->vars['icon'] = $options['icon'];
+        }
+        if (false !== $options['fieldset_class']) {
+            $view->vars['fieldset_class'] = $options['fieldset_class'];
         }
     }
 
